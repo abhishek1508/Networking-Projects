@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen2" >
+
+    <TextView
+        android:id="@+id/forecast_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="#e0ffff"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/curr_temp_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forecast_day1"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/curr_min_temp_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_temp_day1"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_min_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/curr_max_temp_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_min_temp_day1"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_max_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/temp_value_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/curr_min_temp_day1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textColor="#e0ffff"
+        android:textStyle="bold|italic"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/temp_min_value_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/curr_max_temp_day1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/temp_max_value_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/curr_max_temp_day1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/cond_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_max_temp_day1"
+        android:gravity="left"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textColor="#e0ffff"
+        android:text="@string/conditions_1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/cond_value_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cond_1"
+        android:layout_alignBottom="@+id/cond_1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forecast_day1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/wind_speed_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cond_1"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/windspeed_1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/humidity_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wind_speed_day1"
+        android:gravity="left"
+        android:text="@string/humidity_1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#e0ffff"
+        android:textStyle="bold"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/wind_speed_value_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wind_speed_day1"
+        android:layout_alignBottom="@+id/wind_speed_day1"
+        android:layout_alignParentRight="true"
+        android:textColor="#e0ffff"
+		android:layout_marginRight="30dp"
+		android:gravity="right"
+		android:textStyle="bold|italic"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/humidity_value_day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/humidity_day1"
+        android:layout_alignBottom="@+id/humidity_day1"
+        android:layout_alignParentRight="true"
+        android:text="Medium Text"
+        android:textColor="#e0ffff"
+		android:layout_marginRight="30dp"
+		android:gravity="right"
+		android:textStyle="bold|italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/forecast_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity_day1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="#e0ffff"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+     <TextView
+        android:id="@+id/date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forecast_day2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+     
+     <TextView
+        android:id="@+id/curr_temp_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/forecast_day2"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+     
+     <TextView
+        android:id="@+id/curr_min_temp_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_temp_day2"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_min_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/curr_max_temp_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_min_temp_day2"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/day1_max_temp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/temp_value_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/curr_min_temp_day2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textColor="#e0ffff"
+        android:textStyle="bold|italic"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/temp_min_value_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/curr_max_temp_day2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/temp_max_value_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/curr_max_temp_day2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/cond_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/curr_max_temp_day2"
+        android:gravity="left"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textColor="#e0ffff"
+        android:text="@string/conditions_1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/cond_value_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cond_2"
+        android:layout_alignBottom="@+id/cond_2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="right"
+        android:textStyle="bold|italic"
+        android:textColor="#e0ffff"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/wind_speed_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cond_2"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:textColor="#e0ffff"
+        android:text="@string/windspeed_1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/humidity_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wind_speed_day2"
+        android:gravity="left"
+        android:text="@string/humidity_1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#e0ffff"
+        android:textStyle="bold"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/wind_speed_value_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wind_speed_day2"
+        android:layout_alignBottom="@+id/wind_speed_day2"
+        android:layout_alignParentRight="true"
+        android:textColor="#e0ffff"
+		android:layout_marginRight="30dp"
+		android:gravity="right"
+		android:textStyle="bold|italic"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/humidity_value_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/humidity_day2"
+        android:layout_alignBottom="@+id/humidity_day2"
+        android:layout_alignParentRight="true"
+        android:text="Medium Text"
+        android:textColor="#e0ffff"
+		android:layout_marginRight="30dp"
+		android:gravity="right"
+		android:textStyle="bold|italic"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
