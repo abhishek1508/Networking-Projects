@@ -12,9 +12,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class WeatherForecast extends Activity{
@@ -38,6 +40,7 @@ public class WeatherForecast extends Activity{
 	TextView windspeed2;
 	TextView humid2;
 	Calculate_Values val = null;
+	ProgressDialog progress = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -75,6 +78,14 @@ public class WeatherForecast extends Activity{
 		overridePendingTransition(R.anim.weather_forecast, R.anim.current_conditions);
 	}
 	private class DownloadWeatherData extends AsyncTask<String, Void, JSONObject>{
+
+		
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+			progress = ProgressDialog.show(WeatherForecast.this, "Wait", "Your weather is downloading");
+		}
 
 		@Override
 		protected JSONObject doInBackground(String... params) {
@@ -139,29 +150,33 @@ public class WeatherForecast extends Activity{
 			super.onPostExecute(result);
 			long date;
 			try {
-				JSONArray jsonarr = result.getJSONArray("list");
-				JSONObject json_one = jsonarr.getJSONObject(1);
-				JSONObject json_two = jsonarr.getJSONObject(2);
-				date = json_one.getLong("dt");
-				if(val!=null){
-					dayname1.setText(val.dayname(date));
-					date1.setText(val.date(date));
-					temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "day")));
-					min_temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "min")));
-					max_temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "max")));
-					cond1.setText(val.getArrayJSON(json_one, "weather", "description"));
-					windspeed1.setText(json_one.getString("speed")+" mps");
-					humid1.setText(json_one.getString("humidity")+" %");
+				JSONArray jsonarr = null;
+				if(result != null){
+					jsonarr = result.getJSONArray("list");
+					JSONObject json_one = jsonarr.getJSONObject(1);
+					JSONObject json_two = jsonarr.getJSONObject(2);
+					date = json_one.getLong("dt");
+					if(val!=null){
+						dayname1.setText(val.dayname(date));
+						date1.setText(val.date(date));
+						temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "day"))+(char)0x00b0+"C");
+						min_temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "min"))+(char)0x00b0+"C");
+						max_temp1.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_one, "temp", "max"))+(char)0x00b0+"C");
+						cond1.setText(val.getArrayJSON(json_one, "weather", "description"));
+						windspeed1.setText(json_one.getString("speed")+" mps");
+						humid1.setText(json_one.getString("humidity")+" %");
 					
-					date = json_two.getLong("dt");
-					dayname2.setText(val.dayname(date));
-					date2.setText(val.date(date));
-					temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "day")));
-					min_temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "min")));
-					max_temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "max")));
-					cond2.setText(val.getArrayJSON(json_two, "weather", "description"));
-					windspeed2.setText(json_two.getString("speed")+" mps");
-					humid2.setText(json_two.getString("humidity")+" %");
+						date = json_two.getLong("dt");
+						dayname2.setText(val.dayname(date));
+						date2.setText(val.date(date));
+						temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "day"))+(char)0x00b0+"C");
+						min_temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "min"))+(char)0x00b0+"C");
+						max_temp2.setText(val.convert_dble_to_string(val.getObjectJSONDouble(json_two, "temp", "max"))+(char)0x00b0+"C");
+						cond2.setText(val.getArrayJSON(json_two, "weather", "description"));
+						windspeed2.setText(json_two.getString("speed")+" mps");
+						humid2.setText(json_two.getString("humidity")+" %");
+					}
+					progress.dismiss();
 				}
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block

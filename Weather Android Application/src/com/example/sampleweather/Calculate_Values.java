@@ -98,7 +98,7 @@ public class Calculate_Values extends MainActivity{
 		if(id == clearsky){
 			long curtime = new Date().getTime();
 			if(curtime >= sunrise && curtime < sunset)
-				image.setImageResource(R.drawable.sunny);
+				image.setImageResource(R.drawable.clear_sky);
 			else
 				image.setImageResource(R.drawable.clear_sky_night);
 			return 1;
@@ -118,7 +118,7 @@ public class Calculate_Values extends MainActivity{
 					image.setImageResource(R.drawable.overcast);
 					break;
 				default:
-					image.setImageResource(R.drawable.example);
+					image.setImageResource(R.drawable.clear_sky);
 					break;
 			}
 			return 1;
@@ -142,7 +142,7 @@ public class Calculate_Values extends MainActivity{
 					image.setImageResource(R.drawable.atmosphere);
 					break;
 				default:
-					image.setImageResource(R.drawable.example);
+					image.setImageResource(R.drawable.clear_sky);
 					break;
 			}
 			return 1;

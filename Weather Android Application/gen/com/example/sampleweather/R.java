@@ -32,16 +32,15 @@ public final class R {
         public static final int clear_sky=0x7f020004;
         public static final int clear_sky_night=0x7f020005;
         public static final int drizzle=0x7f020006;
-        public static final int example=0x7f020007;
-        public static final int few_clouds=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int overcast=0x7f02000a;
-        public static final int rain=0x7f02000b;
-        public static final int scattered=0x7f02000c;
-        public static final int screen2=0x7f02000d;
-        public static final int snow=0x7f02000e;
-        public static final int sunny=0x7f02000f;
-        public static final int thunder=0x7f020010;
+        public static final int few_clouds=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int overcast=0x7f020009;
+        public static final int rain=0x7f02000a;
+        public static final int scattered=0x7f02000b;
+        public static final int screen2=0x7f02000c;
+        public static final int snow=0x7f02000d;
+        public static final int thunder=0x7f02000e;
+        public static final int weatherquery=0x7f02000f;
     }
     public static final class id {
         public static final int action_settings=0x7f090039;
@@ -113,10 +112,11 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_id=0x7f060002;
-        public static final int app_introduction=0x7f060028;
+        public static final int app_introduction=0x7f06002a;
         public static final int app_name=0x7f060000;
         public static final int app_warning=0x7f060004;
         public static final int button_text=0x7f060006;
+        public static final int city_network_message=0x7f060029;
         public static final int cityname=0x7f060007;
         public static final int conditions_1=0x7f060020;
         public static final int conditions_2=0x7f060026;
@@ -143,6 +143,7 @@ public final class R {
         public static final int maximumtemptext=0x7f06000b;
         public static final int minimumtemp=0x7f06000c;
         public static final int minimumtemptext=0x7f06000d;
+        public static final int network_message=0x7f060028;
         public static final int nocity=0x7f060027;
         public static final int now=0x7f060003;
         public static final int press=0x7f060013;
