@@ -297,28 +297,6 @@ public class MainActivity extends Activity implements OnClickListener,
 					InputMethodManager.HIDE_NOT_ALWAYS);
 		}
 		check_network_onPress(city, mDisablebutton);
-	/*	if (city.equals("") && mDisablebutton)
-			Toast.makeText(MainActivity.this,
-					R.string.city_network_message, Toast.LENGTH_SHORT)
-					.show();
-		else if (city.equals("") && !mDisablebutton)
-			Toast.makeText(MainActivity.this, R.string.nocity,
-					Toast.LENGTH_SHORT).show();
-		else if (!city.equals("") && mDisablebutton)
-			Toast.makeText(MainActivity.this, R.string.network_message,
-					Toast.LENGTH_SHORT).show();
-		else {
-			progress = ProgressDialog.show(MainActivity.this, "Wait",
-					"Downloading your weather");
-			displayresult(city);
-		}*/
-		/*if (!city.equals("") && !mDisablebutton) {
-			progress = ProgressDialog.show(MainActivity.this, "Wait",
-					"Downloading your weather");
-			displayresult(city);
-		} else
-			Toast.makeText(MainActivity.this, R.string.nocity,
-					Toast.LENGTH_SHORT).show();*/
 	}
 
 	/**
