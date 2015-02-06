@@ -312,7 +312,7 @@
 		<item>Murrieta, California</item>
 		<item>High Point, North Carolina</item>
 		<item>Round Rock, Texas</item>
-		<item>Richmond, California</item>
+ 		<item>Richmond, California</item>
 		<item>Cambridge, Massachusetts</item>
 		<item>Norwalk, California</item>
 		<item>Odessa, Texas</item>
@@ -337,7 +337,18 @@
 		<item>Las Cruces, New Mexico</item>
 		<item>South Bend, Indiana</item>
 		<item>Flint, Michigan</item>
-		<item>Kenosha, Wisconsin</item>	
+		<item>Kenosha, Wisconsin</item>
+		<item>Bloomfield, New Jersey</item>
+        <item>Bloomfield, New Mexico</item>
+        <item>Bloomfield, Connecticut</item>
+        <item>Bloomingdale, New Jersey</item>
+        <item>Bloomingdale, Florida</item>
+        <item>Bloomingdale, Illinois</item>
+        <item>Bloomingdale, Tennessee</item>
+        <item>Bloomington, Illinois</item>
+        <item>Bloomington, Indiana</item>
+        <item>Bloomington, California</item>
+        <item>Bloomington, Minnesota</item>
 		
 		<!-- Major European cities -->
 		
@@ -450,7 +461,7 @@
 		<item>Gomel, Belarus</item>
 		<item>Liverpool, UK</item>
 		<item>Anvers, Belgium</item>
-		<item>Lugansk, Ukraine</item>
+		<item>Luhansk, Ukraine</item>
 		<item>Kirov, Russia</item>
 		<item>Cheboksary, Russia</item>
 		<item>Ivanovo, Russia</item>
