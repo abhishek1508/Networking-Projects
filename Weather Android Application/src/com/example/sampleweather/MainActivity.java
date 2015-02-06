@@ -20,10 +20,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
@@ -31,10 +32,9 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
-
 /**
  * @author ABHISHEK
- * 
+ *
  */
 public class MainActivity extends Activity implements OnClickListener, OnCheckedChangeListener, Display{
 
@@ -42,7 +42,8 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 	Button ok;
 	Button forecast;
 	ImageView image;
-	EditText edittext;
+	AutoCompleteTextView mAuto;
+	//EditText edittext;
 	Switch toggleswitch;
 	TextView cityname;
 	TextView countryname;
@@ -56,9 +57,9 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 	RelativeLayout layout1;
 	RelativeLayout layout2;
 	
-	String city = null;
-	String mDebug = "MainActivity";
-	String currentweather = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric";
+	private String city = null;
+	private static String mDebug = MainActivity.class.getName();
+	private String currentweather = "http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric";
 	private double farenhiet_curr;
 	private double celcius_curr;
 	private double far_min;
@@ -135,13 +136,21 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 		windspeed = (TextView) findViewById(R.id.windspeed_value);
 		pressure = (TextView) findViewById(R.id.pressure_value);
 		image = (ImageView) findViewById(R.id.weather_icon);
-		edittext = (EditText) findViewById(R.id.entercity);
+		mAuto = (AutoCompleteTextView) findViewById(R.id.entercity);
 		val = new Calculate_Values(this.getApplicationContext(),image);
 		abbreviate = new CountryAbbreviation();
 		ok.setOnClickListener(this);
 		toggleswitch.setChecked(true);
 		toggleswitch.setOnCheckedChangeListener(this);
-		edittext.setOnEditorActionListener(new OnEditorActionListener() {
+		/*
+		 * AutoCompleteTextView is used to enable the user to choose from a list of cities that popup once the
+		 * user starts in typing the city name. An array of strings is created and the android provided list view is
+		 * inflated when clicked on TextView.
+		 */
+		String[] mCities = getResources().getStringArray(R.array.list_of_cities);
+		ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, mCities);
+		mAuto.setAdapter(mAdapter);
+		mAuto.setOnEditorActionListener(new OnEditorActionListener() {
 			
 			@Override
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -150,7 +159,7 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 				 * Display the weather conditions when user presses the Done button on the soft keyboard.
 				 */
 				if(actionId == EditorInfo.IME_ACTION_DONE){
-					city = edittext.getText().toString();
+					city = mAuto.getText().toString();
 					if(!city.equals("")){
 						progress = ProgressDialog.show(MainActivity.this, "Wait", "Downloading your weather");
 						displayresult(city);
@@ -165,7 +174,7 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 			
 			@Override
 			public void onClick(View v) {
-				city = edittext.getText().toString();
+				city = mAuto.getText().toString();
 				/*
 				 * Conditions to check if the network connection is on/off in middle of the application 
 				 * and displays appropriate message depending on the results obtained.
@@ -237,7 +246,7 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		city = edittext.getText().toString();
+		city = mAuto.getText().toString();
 		Log.d(mDebug,"inside onClick(). The value of city is: "+ city);
 		if(context!=null){
 			/*
@@ -284,8 +293,8 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 						@Override
 						public void run() {
 							// TODO Auto-generated method stub
-							if(!mActivescreen)
-								showvisibility();
+							/*if(!mActivescreen)
+								showvisibility();*/
 							reportweather(json,city);
 						}
 					});
@@ -352,6 +361,8 @@ public class MainActivity extends Activity implements OnClickListener, OnChecked
 				val.weathericon(val.getArray_JSON(json, "weather", "id") , val.getObjectJSONLong(json, "sys", "sunrise"),
 						val.getObjectJSONLong(json, "sys", "sunset"));
 				progress.dismiss();
+				if(!mActivescreen)
+					showvisibility();
 			}
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

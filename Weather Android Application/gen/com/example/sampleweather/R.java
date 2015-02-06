@@ -12,6 +12,11 @@ public final class R {
         public static final int current_conditions=0x7f040000;
         public static final int weather_forecast=0x7f040001;
     }
+    public static final class array {
+        /**  The list contains major cities in USA, Europe and India. 
+         */
+        public static final int list_of_cities=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -43,71 +48,72 @@ public final class R {
         public static final int weatherquery=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090039;
-        public static final int button1=0x7f09001c;
-        public static final int button_go=0x7f090003;
-        public static final int cityname=0x7f09000a;
-        public static final int cond_1=0x7f090024;
-        public static final int cond_2=0x7f090033;
-        public static final int cond_value_1=0x7f090025;
-        public static final int cond_value_2=0x7f090034;
-        public static final int countryname=0x7f09000b;
-        public static final int curr_max_temp=0x7f090011;
-        public static final int curr_max_temp_day1=0x7f090020;
-        public static final int curr_max_temp_day2=0x7f09002f;
-        public static final int curr_min_temp=0x7f090010;
-        public static final int curr_min_temp_day1=0x7f09001f;
-        public static final int curr_min_temp_day2=0x7f09002e;
-        public static final int curr_temp_day1=0x7f09001e;
-        public static final int curr_temp_day2=0x7f09002d;
-        public static final int current_temp=0x7f09000d;
-        public static final int date1=0x7f090026;
-        public static final int date2=0x7f09002c;
-        public static final int description=0x7f09000c;
-        public static final int entercity=0x7f090002;
-        public static final int forecast_day1=0x7f09001d;
-        public static final int forecast_day2=0x7f09002b;
-        public static final int humid_value=0x7f090013;
-        public static final int humidity=0x7f090014;
-        public static final int humidity_day1=0x7f090028;
-        public static final int humidity_day2=0x7f090036;
-        public static final int humidity_unit=0x7f090015;
-        public static final int humidity_value_day1=0x7f09002a;
-        public static final int humidity_value_day2=0x7f090038;
-        public static final int introduction=0x7f090005;
-        public static final int linearLayout1=0x7f090001;
-        public static final int now=0x7f090009;
-        public static final int press_unit=0x7f090018;
-        public static final int pressure=0x7f090016;
-        public static final int pressure_value=0x7f090017;
-        public static final int relativeLayout1=0x7f090007;
-        public static final int relativelayout_child1=0x7f090004;
-        public static final int relativelayout_child2=0x7f090006;
-        public static final int relativelayout_parent=0x7f090000;
-        public static final int switch1=0x7f090012;
-        public static final int temp_max_value_1=0x7f090023;
-        public static final int temp_max_value_2=0x7f090032;
-        public static final int temp_min_value_1=0x7f090022;
-        public static final int temp_min_value_2=0x7f090031;
-        public static final int temp_value_1=0x7f090021;
-        public static final int temp_value_2=0x7f090030;
-        public static final int text_maximum=0x7f09000e;
-        public static final int text_minimum=0x7f09000f;
-        public static final int weather_icon=0x7f090008;
-        public static final int wind_speed_day1=0x7f090027;
-        public static final int wind_speed_day2=0x7f090035;
-        public static final int wind_speed_value_day1=0x7f090029;
-        public static final int wind_speed_value_day2=0x7f090037;
-        public static final int wind_unit=0x7f09001b;
-        public static final int windspeed=0x7f090019;
-        public static final int windspeed_value=0x7f09001a;
+        public static final int action_settings=0x7f0a003a;
+        public static final int button1=0x7f0a001d;
+        public static final int button_go=0x7f0a0003;
+        public static final int cityname=0x7f0a000b;
+        public static final int cond_1=0x7f0a0025;
+        public static final int cond_2=0x7f0a0034;
+        public static final int cond_value_1=0x7f0a0026;
+        public static final int cond_value_2=0x7f0a0035;
+        public static final int countryname=0x7f0a000c;
+        public static final int curr_max_temp=0x7f0a0012;
+        public static final int curr_max_temp_day1=0x7f0a0021;
+        public static final int curr_max_temp_day2=0x7f0a0030;
+        public static final int curr_min_temp=0x7f0a0011;
+        public static final int curr_min_temp_day1=0x7f0a0020;
+        public static final int curr_min_temp_day2=0x7f0a002f;
+        public static final int curr_temp_day1=0x7f0a001f;
+        public static final int curr_temp_day2=0x7f0a002e;
+        public static final int current_temp=0x7f0a000e;
+        public static final int date1=0x7f0a0027;
+        public static final int date2=0x7f0a002d;
+        public static final int description=0x7f0a000d;
+        public static final int entercity=0x7f0a0002;
+        public static final int forecast_day1=0x7f0a001e;
+        public static final int forecast_day2=0x7f0a002c;
+        public static final int humid_value=0x7f0a0014;
+        public static final int humidity=0x7f0a0015;
+        public static final int humidity_day1=0x7f0a0029;
+        public static final int humidity_day2=0x7f0a0037;
+        public static final int humidity_unit=0x7f0a0016;
+        public static final int humidity_value_day1=0x7f0a002b;
+        public static final int humidity_value_day2=0x7f0a0039;
+        public static final int introduction=0x7f0a0006;
+        public static final int linearLayout1=0x7f0a0001;
+        public static final int now=0x7f0a000a;
+        public static final int press_unit=0x7f0a0019;
+        public static final int pressure=0x7f0a0017;
+        public static final int pressure_value=0x7f0a0018;
+        public static final int relativeLayout1=0x7f0a0008;
+        public static final int relativelayout_child1=0x7f0a0005;
+        public static final int relativelayout_child2=0x7f0a0007;
+        public static final int relativelayout_parent=0x7f0a0000;
+        public static final int switch1=0x7f0a0013;
+        public static final int temp_max_value_1=0x7f0a0024;
+        public static final int temp_max_value_2=0x7f0a0033;
+        public static final int temp_min_value_1=0x7f0a0023;
+        public static final int temp_min_value_2=0x7f0a0032;
+        public static final int temp_value_1=0x7f0a0022;
+        public static final int temp_value_2=0x7f0a0031;
+        public static final int textView1=0x7f0a0004;
+        public static final int text_maximum=0x7f0a000f;
+        public static final int text_minimum=0x7f0a0010;
+        public static final int weather_icon=0x7f0a0009;
+        public static final int wind_speed_day1=0x7f0a0028;
+        public static final int wind_speed_day2=0x7f0a0036;
+        public static final int wind_speed_value_day1=0x7f0a002a;
+        public static final int wind_speed_value_day2=0x7f0a0038;
+        public static final int wind_unit=0x7f0a001c;
+        public static final int windspeed=0x7f0a001a;
+        public static final int windspeed_value=0x7f0a001b;
     }
     public static final class layout {
         public static final int current_conditions=0x7f030000;
         public static final int weather_forecast=0x7f030001;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
@@ -176,10 +182,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
 }

@@ -6,7 +6,7 @@
     <string name="app_id">9999</string>
     <string name="now">Current Conditions</string>
     <string name="app_warning">City name or spelling incorrect</string>
-	<string name="edittext_hint">Enter the name of a city</string>
+	<string name="edittext_hint">Enter city name</string>
 	<string name="button_text">OK</string>
 	<string name="cityname">BLOOMINGTON</string>
 	<string name="countryname">United States of America</string>
@@ -46,11 +46,796 @@
 	<string name="nocity">Please enter the name of a city to proceed</string>
 	<string name="network_message">Please check your Network Connection</string>
 	<string name="city_network_message">Please enter a city name and check your Network Connection</string>
-	<string name="app_introduction">Welcome to Weather Query!!\n\n
-	    							Enter the name of the city for which you want to get the weather update and press OK.\n\n
-	    							Example: New York \n\n
-	    							If the Country has more than one city with the same name enter the name of the city and the name of the state 
-	    							separated by a blank space and then press OK.\n\n
-	    							Example: Bloomington Indiana
-	  </string>
+	<string name="app_introduction">Note:\nType the full name of any city/town except for the major cities located in Europe, India and US.</string>
+	
+	<!-- The list contains major cities in USA, Europe and India. -->
+	<string-array name="list_of_cities">
+	    <!-- Major US cities -->
+	    <item>New York, New York</item>
+		<item>Los Angeles, California</item>
+		<item>Chicago, Illinois</item>
+		<item>Houston, Texas</item>
+		<item>Philadelphia, Pennsylvania</item>
+		<item>Phoenix, Arizona</item>
+		<item>San Antonio, Texas</item>
+		<item>San Diego, California</item>
+		<item>Dallas, Texas</item>
+		<item>San Jose, California</item>
+		<item>Austin, Texas</item>
+		<item>Jacksonville, Florida</item>
+		<item>Indianapolis, Indiana</item>
+		<item>San Francisco, California</item>
+		<item>Columbus, Ohio</item>
+		<item>Fort Worth, Texas</item>
+		<item>Charlotte, North Carolina</item>
+		<item>Detroit, Michigan</item>
+		<item>El Paso, Texas</item>
+		<item>Memphis, Tennessee</item>
+		<item>Boston, Massachusetts</item>
+		<item>Seattle, Washington</item>
+		<item>Denver, Colorado</item>
+		<item>Washington, District of Columbia</item>
+		<item>Nashville, Tennessee</item>
+		<item>Baltimore, Maryland</item>
+		<item>Louisville, Kentucky</item>
+		<item>Portland, Oregon</item>
+		<item>Oklahoma City, Oklahoma</item>
+		<item>Milwaukee, Wisconsin</item>
+		<item>Las Vegas, Nevada</item>
+		<item>Albuquerque, New Mexico</item>
+		<item>Tucson, Arizona</item>
+		<item>Fresno, California</item>
+		<item>Sacramento, California</item>
+		<item>Long Beach, California</item>
+		<item>Kansas City, Missouri</item>
+		<item>Mesa, Arizona</item>
+		<item>Virginia Beach, Virginia</item>
+		<item>Atlanta, Georgia</item>
+		<item>Colorado Springs, Colorado</item>
+		<item>Raleigh, North Carolina</item>
+		<item>Omaha, Nebraska</item>
+		<item>Miami, Florida</item>
+		<item>Oakland, California</item>
+		<item>Tulsa, Oklahoma</item>
+		<item>Minneapolis, Minnesota</item>
+		<item>Cleveland, Ohio</item>
+		<item>Wichita, Kansas</item>
+		<item>Arlington, Texas</item>
+		<item>New Orleans, Louisiana</item>
+		<item>Bakersfield, California</item>
+		<item>Tampa, Florida</item>
+		<item>Honolulu, Hawaii</item>
+		<item>Anaheim, California</item>
+		<item>Aurora, Colorado</item>
+		<item>Santa Ana, California</item>
+		<item>St. Louis, Missouri</item>
+		<item>Riverside, California</item>
+		<item>Corpus Christi, Texas</item>
+		<item>Pittsburgh, Pennsylvania</item>
+		<item>Lexington, Kentucky</item>
+		<item>Anchorage, Alaska</item>
+		<item>Stockton, California</item>
+		<item>Cincinnati, Ohio</item>
+		<item>Saint Paul, Minnesota</item>
+		<item>Toledo, Ohio</item>
+		<item>Newark, New Jersey</item>
+		<item>Greensboro, North Carolina</item>
+		<item>Plano, Texas</item>
+		<item>Henderson, Nevada</item>
+		<item>Lincoln, Nebraska</item>
+		<item>Buffalo, New York</item>
+		<item>Fort Wayne, Indiana</item>
+		<item>Jersey City, New Jersey</item>
+		<item>Chula Vista, California</item>
+		<item>Orlando, Florida</item>
+		<item>St. Petersburg, Florida</item>
+		<item>Norfolk, Virginia</item>
+		<item>Chandler, Arizona</item>
+		<item>Laredo, Texas</item>
+		<item>Madison, Wisconsin</item>
+		<item>Durham, North Carolina</item>
+		<item>Lubbock, Texas</item>
+		<item>Winston-Salem, North Carolina</item>
+		<item>Garland, Texas</item>
+		<item>Glendale, Arizona</item>
+		<item>Hialeah, Florida</item>
+		<item>Reno, Nevada</item>
+		<item>Baton Rouge, Louisiana</item>
+		<item>Irvine, California</item>
+		<item>Chesapeake, Virginia</item>
+		<item>Irving, Texas</item>
+		<item>Scottsdale, Arizona</item>
+		<item>North Las Vegas, Nevada</item>
+		<item>Fremont, California</item>
+		<item>Gilbert, Arizona</item>
+		<item>San Bernardino, California</item>
+		<item>Boise, Idaho</item>
+		<item>Birmingham, Alabama</item>
+		<item>Rochester, New York</item>
+		<item>Richmond, Virginia</item>
+		<item>Spokane, Washington</item>
+		<item>Des Moines, Iowa</item>
+		<item>Montgomery, Alabama</item>
+		<item>Modesto, California</item>
+		<item>Fayetteville, North Carolina</item>
+		<item>Tacoma, Washington</item>
+		<item>Shreveport, Louisiana</item>
+		<item>Fontana, California</item>
+		<item>Oxnard, California</item>
+		<item>Aurora, Illinois</item>
+		<item>Moreno Valley, California</item>
+		<item>Akron, Ohio</item>
+		<item>Yonkers, New York</item>
+		<item>Columbus, Georgia</item>
+		<item>Augusta, Georgia</item>
+		<item>Little Rock, Arkansas</item>
+		<item>Amarillo, Texas</item>
+		<item>Mobile, Alabama</item>
+		<item>Huntington Beach, California</item>
+		<item>Glendale, California</item>
+		<item>Grand Rapids, Michigan</item>
+		<item>Salt Lake City, Utah</item>
+		<item>Tallahassee, Florida</item>
+		<item>Huntsville, Alabama</item>		
+		<item>Worcester, Massachusetts</item>		
+		<item>Knoxville, Tennessee</item>		
+		<item>Grand Prairie, Texas</item>		
+		<item>Newport News, Virginia</item>	
+		<item>Brownsville, Texas</item>		
+		<item>Santa Clarita, California</item>		
+		<item>Overland Park, Kansas</item>		
+		<item>Providence, Rhode Island</item>	
+		<item>Jackson, Mississippi</item>		
+		<item>Garden Grove, California</item>		
+		<item>Oceanside, California</item>		
+		<item>Chattanooga, Tennessee</item>
+		<item>Fort Lauderdale, Florida</item>
+		<item>Rancho Cucamonga, California</item>
+		<item>Santa Rosa, California</item>
+		<item>Port St. Lucie, Florida</item>
+		<item>Ontario, California</item>
+		<item>Tempe, Arizona</item>
+		<item>Vancouver, Washington</item>
+		<item>Springfield, Missouri</item>
+		<item>Cape Coral, Florida</item>
+		<item>Pembroke Pines, Florida</item>
+		<item>Sioux Falls, South Dakota</item>
+		<item>Peoria, Arizona</item>
+		<item>Lancaster, California</item>
+		<item>Elk Grove, California</item>
+		<item>Corona, California</item>
+		<item>Eugene, Oregon</item>
+		<item>Salem, Oregon</item>
+		<item>Palmdale, California</item>
+		<item>Salinas, California</item>
+		<item>Springfield, Massachusetts</item>
+		<item>Pasadena, Texas</item>
+		<item>Rockford, Illinois</item>
+		<item>Pomona, California</item>
+		<item>Hayward, California</item>
+		<item>Fort Collins, Colorado</item>
+		<item>Joliet, Illinois</item>
+		<item>Escondido, California</item>
+		<item>Kansas City, Kansas</item>
+		<item>Torrance, California</item>
+		<item>Bridgeport, Connecticut</item>
+		<item>Alexandria, Virginia</item>
+		<item>Sunnyvale, California</item>
+		<item>Cary, North Carolina</item>
+		<item>Lakewood, Colorado</item>
+		<item>Hollywood, Florida</item>
+		<item>Paterson, New Jersey</item>
+		<item>Syracuse, New York</item>
+		<item>Naperville, Illinois</item>
+		<item>McKinney, Texas</item>
+		<item>Mesquite, Texas</item>
+		<item>Clarksville, Tennessee</item>
+		<item>Savannah, Georgia</item>
+		<item>Dayton, Ohio</item>
+		<item>Orange, California</item>
+		<item>Fullerton, California</item>
+		<item>Pasadena, California</item>
+		<item>Hampton, Virginia</item>
+		<item>McAllen, Texas</item>
+		<item>Killeen, Texas</item>
+		<item>Warren, Michigan</item>
+		<item>West Valley City, Utah</item>
+		<item>Columbia, South Carolina</item>
+		<item>New Haven, Connecticut</item>
+		<item>Sterling Heights, Michigan</item>
+		<item>Olathe, Kansas</item>
+		<item>Miramar, Florida</item>
+		<item>Thousand Oaks, California</item>
+		<item>Frisco, Texas</item>
+		<item>Cedar Rapids, Iowa</item>
+		<item>Topeka, Kansas</item>
+		<item>Visalia, California</item>
+		<item>Waco, Texas</item>
+		<item>Elizabeth, New Jersey</item>
+		<item>Bellevue, Washington</item>
+		<item>Gainesville, Florida</item>
+		<item>Simi Valley, California</item>
+		<item>Charleston, South Carolina</item>
+		<item>Carrollton, Texas</item>
+		<item>Coral Springs, Florida</item>
+		<item>Stamford, Connecticut</item>
+		<item>Hartford, Connecticut</item>
+		<item>Concord, California</item>
+		<item>Roseville, California</item>
+		<item>Thornton, Colorado</item>
+		<item>Kent, Washington</item>
+		<item>Lafayette, Louisiana</item>
+		<item>Surprise, Arizona</item>
+		<item>Denton, Texas</item>
+		<item>Victorville, California</item>
+		<item>Evansville, Indiana</item>
+		<item>Midland, Texas</item>
+		<item>Santa Clara, California</item>
+		<item>Athens, Georgia</item>
+		<item>Allentown, Pennsylvania</item>
+		<item>Abilene, Texas</item>
+		<item>Beaumont, Texas</item>
+		<item>Vallejo, California</item>
+		<item>Independence, Missouri</item>
+		<item>Springfield, Illinois</item>
+		<item>Ann Arbor, Michigan</item>
+		<item>Provo, Utah</item>
+		<item>Peoria, Illinois</item>
+		<item>Norman, Oklahoma</item>
+		<item>Berkeley, California</item>
+		<item>El Monte, California</item>
+		<item>Murfreesboro, Tennessee</item>	
+		<item>Lansing, Michigan</item>
+		<item>Columbia, Missouri</item>
+		<item>Downey, California</item>
+		<item>Costa Mesa, California</item>
+		<item>Inglewood, California</item>
+		<item>Miami Gardens, Florida</item>
+		<item>Manchester, New Hampshire</item>
+		<item>Elgin, Illinois</item>
+		<item>Wilmington, North Carolina</item>
+		<item>Waterbury, Connecticut</item>
+		<item>Fargo, North Dakota</item>
+		<item>Arvada, Colorado</item>
+		<item>Carlsbad, California</item>
+		<item>Westminster, Colorado</item>
+		<item>Rochester, Minnesota</item>
+		<item>Gresham, Oregon</item>
+		<item>Clearwater, Florida</item>
+		<item>Lowell, Massachusetts</item>
+		<item>West Jordan, Utah</item>
+		<item>Pueblo, Colorado</item>
+		<item>San Buenaventura (Ventura), California</item>
+		<item>Fairfield, California</item>
+		<item>West Covina, California</item>
+		<item>Billings, Montana</item>
+		<item>Murrieta, California</item>
+		<item>High Point, North Carolina</item>
+		<item>Round Rock, Texas</item>
+		<item>Richmond, California</item>
+		<item>Cambridge, Massachusetts</item>
+		<item>Norwalk, California</item>
+		<item>Odessa, Texas</item>
+		<item>Antioch, California</item>
+		<item>Temecula, California</item>
+		<item>Green Bay, Wisconsin</item>
+		<item>Everett, Washington</item>
+		<item>Wichita Falls, Texas</item>
+		<item>Burbank, California</item>
+		<item>Palm Bay, Florida</item>
+		<item>Centennial, Colorado</item>
+		<item>Daly City, California</item>
+		<item>Richardson, Texas</item>	
+		<item>Pompano Beach, Florida</item>
+		<item>Broken Arrow, Oklahoma</item>
+		<item>North Charleston, South Carolina</item>
+		<item>Rialto, California</item>
+		<item>Santa Maria, California</item>
+		<item>El Cajon, California</item>	
+		<item>Davenport, Iowa</item>	
+		<item>Erie, Pennsylvania</item>	
+		<item>Las Cruces, New Mexico</item>
+		<item>South Bend, Indiana</item>
+		<item>Flint, Michigan</item>
+		<item>Kenosha, Wisconsin</item>	
+		
+		<!-- Major European cities -->
+		
+		<item>Moscow, Russia</item>
+		<item>LONDON, UK</item>
+		<item>St Petersburg, Russia</item>
+		<item>BERLIN, Germany</item>
+		<item>MADRID, Spain</item>
+		<item>ROMA, Italy</item>
+		<item>KIEV, Ukraine</item>
+		<item>PARIS, France</item>
+		<item>Bucharest, Romania</item>
+		<item>BUDAPEST, Hungary</item>
+		<item>Hamburg, Germany</item>
+		<item>MINSK, Belarus</item>
+		<item>Warsaw, Poland</item>
+		<item>Belgrade, Serbia</item>
+		<item>Vienna, Austria</item>
+		<item>Kharkov, Ukraine</item>
+		<item>Barcelona, Spain</item>
+		<item>Novosibirsk, Russia</item>
+		<item>Nizhny Novgorod, Russia</item>
+		<item>Milan, Italy</item>
+		<item>Ekaterinoburg, Russia</item>
+		<item>Munich, Germany</item>
+		<item>Prague, Czech Republic</item>
+		<item>Samara, Russia</item>
+		<item>Omsk, Russia</item>
+		<item>SOFIA, Bulgaria</item>
+		<item>Dnepropetrovsk, Ukraine</item>
+		<item>Kazan, Russia</item>
+		<item>Ufa, Russia</item>
+		<item>Chelyabinsk, Russia</item>
+		<item>Donetsk, Ukraine</item>
+		<item>Naples, Italy</item>
+		<item>Birmingham, UK</item>
+		<item>Perm, Russia</item>
+		<item>Odessa, Ukraine</item>
+		<item>Volgograd, Russia</item>
+		<item>Cologne, Germany</item>
+		<item>Turin, Italy</item>
+		<item>Voronezh, Russia</item>
+		<item>Krasnoyarsk, Russia</item>
+		<item>Saratov, Russia</item>
+		<item>ZAGREB, Croatia</item>
+		<item>Zaporozhye, Ukraine</item>
+		<item>Lódz, Poland</item>
+		<item>Marseille, France</item>
+		<item>RIGA, Latvia</item>
+		<item>Lvov, Ukraine</item>
+		<item>Athens, Greece</item>
+		<item>Salonika, Greece</item>
+		<item>STOCKHOLM, Sweden</item>
+		<item>Kraków, Poland</item>
+		<item>Valencia, Spain</item>
+		<item>AMSTERDAM, Netherlands</item>
+		<item>Leeds, UK</item>
+		<item>Tolyatti, Russia</item>
+		<item>Kryvy Rig, Ukraine</item>
+		<item>Sevilla, Spain</item>
+		<item>Palermo, Italy</item>
+		<item>Ulyanovsk, Russia</item>
+		<item>KISHINEV, Moldova</item>
+		<item>Genova, Italy</item>
+		<item>Izhevsk, Russia</item>
+		<item>Frankfurt, Germany</item>
+		<item>Krasnodar, Russia</item>
+		<item>Breslau, Poland</item>
+		<item>Glasgow, UK</item>
+		<item>Yaroslave, Russia</item>
+		<item>Khabarovsk, Russia</item>
+		<item>Vladivostok, Russia</item>
+		<item>Zaragoza, Spain</item>
+		<item>Essen, Germany</item>
+		<item>Rotterdam, Netherlands</item>
+		<item>Irkutsk, Russia</item>
+		<item>Dortmund, Germany</item>
+		<item>Stuttgart, Germany</item>
+		<item>Barnaul, Russia</item>
+		<item>VILNIUS, Lithuania</item>
+		<item>Poznan, Poland</item>
+		<item>Düsseldorf, Germany</item>
+		<item>Novokuznetsk, Russia</item>
+		<item>Lisbon, Portugal</item>
+		<item>HELSINKI, Finland</item>
+		<item>Málaga, Spain</item>
+		<item>Bremen, Germany</item>
+		<item>Sheffield, UK</item>
+		<item>SARAJEVO, Bosnia</item>
+		<item>Penza, Russia</item>
+		<item>Ryazan, Russia</item>
+		<item>Orenburg, Russia</item>
+		<item>Duisburg, Germany</item>
+		<item>Lipetsk, Russia</item>
+		<item>Hannover, Germany</item>
+		<item>Mykolaiv, Ukraine</item>
+		<item>Tula, Russia</item>
+		<item>OSLO, Norway</item>
+		<item>Tyumen, Russia</item>
+		<item>Copenhagen, Denmark</item>
+		<item>Kemerovo, Russia</item>
+		<item>Mariupol, Ukraine</item>
+		<item>Leipzig, Germany</item>
+		<item>Nuremberg, Germany</item>
+		<item>Bradford, UK</item>
+		<item>Astrakhan, Russia</item>
+		<item>DUBLIN, Ireland</item>
+		<item>Tomsk, Russia</item>
+		<item>Dresden, Germany</item>
+		<item>Gomel, Belarus</item>
+		<item>Liverpool, UK</item>
+		<item>Anvers, Belgium</item>
+		<item>Lugansk, Ukraine</item>
+		<item>Kirov, Russia</item>
+		<item>Cheboksary, Russia</item>
+		<item>Ivanovo, Russia</item>
+		<item>Danzig, Poland</item>
+		<item>Bryansk, Russia</item>
+		<item>Tver, Russia</item>
+		<item>Edinburgh, UK</item>
+		<item>BRATISLAVA, Slovak Republic</item>
+		<item>Kursk, Russia</item>
+		<item>Manchester, UK</item>
+		<item>Magnitogorsk, Russia</item>
+		<item>Kaliningrad, Russia</item>
+		<item>TALLINN, Estonia</item>
+		<item>Szczecin, Poland</item>
+		<item>Lyon, France</item>
+		<item>Kaunas, Lithuania</item>
+		<item>Bristol, UK</item>
+		<item>Nizhny Tagil, Russia</item>
+		<item>Bochum, Germany</item>
+		<item>Kirklees, UK</item>
+		<item>Makeyevka, Ukraine</item>
+		<item>Bydgoszcz, Poland</item>
+		<item>Bologna, Italy</item>
+		<item>Brno, Czech Republic</item>
+		<item>Vinnutsya, Ukraine</item>
+		<item>Firenze, Italy</item>
+		<item>Murmansk, Russia</item>
+		<item>Ulan-Ude, Russia</item>
+		<item>Wuppertal, Germany</item>
+		<item>Arkhangelsk, Russia</item>
+		<item>Kurgan, Russia</item>
+		<item>Toulouse, France</item>
+		<item>Lublin, Poland</item>
+		<item>Mogilev, Belarus</item>
+		<item>Kherson, Ukraine</item>
+		<item>Las Palmas, Spain</item>
+		<item>Smolensk, Russia</item>
+		<item>Bilbao, Spain</item>
+		<item>Sevastopol, Ukraine</item>
+		<item>Murcia, Spain</item>
+		<item>Fife, UK</item>
+		<item>Iasi, Romania</item>
+		<item>Katowice, Poland</item>
+		<item>Nice, France</item>
+		<item>Stavropol, Russia</item>
+		<item>Constanta, Romania</item>
+		<item>Orel, Russia</item>
+		<item>Catania, Italy</item>
+		<item>Vitebsk, Belarus</item>
+		<item>Kaluga, Russia</item>
+		<item>Belgorod, Russia</item>
+		<item>Zürich, Switzerland</item>
+		<item>Simferopol, Ukraine</item>
+		<item>Bari, Italy</item>
+		<item>Vladimir, Russia</item>
+		<item>Sochi, Russia</item>
+		<item>Makhachkala, Russia</item>
+		<item>Galati, Romania</item>
+		<item>Wirral, UK</item>
+		<item>North Lanarkshire, UK</item>
+		<item>Timisoara, Romania</item>
+		<item>Cherepovets, Russia</item>
+		<item>Ostrava, Czech Republic</item>
+		<item>Bielefeld, Germany</item>
+		<item>Wakefield, UK</item>
+		<item>Valladolid, Spain</item>
+		<item>Saransk, Russia</item>
+		<item>Cardiff, UK</item>
+		<item>Brasov, Romania</item>
+		<item>Craiova, Romania</item>
+		<item>Poltava, Ukraine</item>
+		<item>Tambov, Russia</item>
+		<item>Dudley, UK</item>
+		<item>Wigan, UK</item>
+		<item>Chita, Russia</item>
+		<item>Vladikavkaz, Russia</item>
+		<item>East Riding of Yorkshire, UK</item>
+		<item>Cherkassy, Ukraine</item>
+		<item>Mannheim, Germany</item>
+		<item>South Lanarkshire, UK</item>
+		<item>Chernigov, Ukraine</item>
+		<item>Coventry, UK</item>
+		<item>Gorlovka, Ukraine</item>
+		<item>Grodno, Belarus</item>
+		<item>Bonn, Germany</item>
+		<item>Vologda, Russia</item>
+		<item>Varna, Bulgaria</item>
+		<item>Venezia, Italy</item>
+		<item>Zhitomir, Ukraine</item>
+		<item>Belfast, UK</item>
+		<item>Sumy, Ukraine</item>
+		<item>Leicester, UK</item>
+		<item>Sunderland, UK</item>
+		<item>Sandwell, UK</item>
+		<item>Doncaster, UK</item>
+		<item>Stockport, UK</item>
+		<item>Sefton, UK</item>
+		<item>Kostroma, Russia</item>
+		<item>Vigo, Spain</item>
+		<item>Brest, Belarus</item>
+		<item>Volzhsky, Russia</item>
+		<item>Taganrog, Russia</item>
+		<item>Bialystok, Poland</item>
+		<item>Nottingham, UK</item>
+		<item>Petrozavodsk, Russia</item>
+		<item>Newcastle-upon-Tyne, UK</item>
+		<item>Gelsenkirchen, Germany</item>
+		<item>Bratsk, Russia</item>
+		<item>Dzerzhinsk, Russia</item>
+		<item>Surgut, Russia</item>
+		<item>Karlsruhe, Germany</item>
+		<item>Orsk, Russia</item>
+		<item>Porto, Portugal</item>
+		<item>Alicante, Spain</item>
+		<item>Dneprodzerzhinsk, Ukraine</item>
+		<item>Wiesbaden, Germany</item>
+		<item>Kirovograd, Ukraine</item>
+		<item>Kingston-upon-Hull, UK</item>
+		<item>Novi Sad, Serbia</item>
+		<item>Bolton, UK</item>
+		<item>Angarsk, Russia</item>
+		<item>Sterlitamak, Russia</item>
+		<item>LJUBLJANA, Slovenia</item>
+		<item>Mönchengladbach, Germany</item>
+		<item>Chemnitz, Germany</item>
+		<item>Messina, Italy</item>
+		<item>Walsall, UK</item>
+		<item>Chernovtsy, Ukraine</item>
+		<item>Khmelnitsky, Ukraine</item>
+		<item>Czestochowa, Poland</item>
+		<item>Plymouth, UK</item>
+		<item>Hospitalet de Llobregat, Spain</item>
+		<item>Rotherham, UK</item>
+		<item>Augsburg, Germany</item>
+		<item>Stoke-on-Trent, UK</item>
+		<item>Halle, Germany</item>
+		<item>Verona, Italy</item>
+		<item>Gdynia, Poland</item>
+		<item>Strasbourg, France</item>
+		<item>Ploiesti, Romania</item>
+		<item>Nis, Serbia</item>
+		<item>Braunschweig, Germany</item>
+		<item>Nantes, France</item>
+		<item>Wolverhampton, UK</item>
+		<item>Rovno, Ukraine</item>
+		<item>TIRANA, Albania</item>
+		<item>Aachen, Germany</item>
+		<item>Sosnowiec, Poland</item>
+		<item>Granada, Spain</item>
+		<item>Kosice, Slovakia</item>
+		<item>Krefeld, Germany</item>
+		<item>Rybinsk, Russia</item>
+		<item>Krementchug, Ukraine</item>
+		<item>Nizhenvartovsk, Russia</item>
+		<item>Graz, Austria</item>
+		<item>Prokopyevsk, Russia</item>
+		<item>Severodvinsk, Russia</item>
+		<item>South Gloucestershire, UK</item>
+		<item>Magdeburg, Germany</item>
+		<item>Kiel, Germany</item>
+		<item>Braila, Romania</item>
+		<item>Derby, UK</item>
+		<item>Utrecht, Netherlands</item>
+		<item>Ternopol, Ukraine</item>
+		<item>Radom, Poland</item>
+		<item>Swansea, UK</item>
+		<item>Naltchik, Russia</item>
+		<item>Syktivkar, Russia</item>
+		<item>Velikiy Novgorod, Russia</item>
+		<item>Salford, UK</item>
+		<item>Bergen, Norway</item>
+		<item>Aberdeenshire, UK</item>
+		<item>Biisk, Russia</item>
+		<item>Nizhnekamsk, Russia</item>
+		<item>Trieste, Italy</item>
+		<item>Oberhausen, Germany</item>
+		<item>Oradea, Romania</item>
+		<item>Shakhty, Russia</item>
+		<item>Tameside, UK</item>
+		<item>Bobruisk, Belarus</item>
+		<item>Oldham, UK</item>
+		<item>Blagoveshchensk, Russia</item>
+		<item>Trafford, UK</item>
+		<item>Aberdeen, UK</item>
+		<item>Lutsk, Ukraine</item>
+		<item>Southampton, UK</item>
+		<item>Lübeck, Germany</item>
+		<item>Padova, Italy</item>
+		<item>Belaya Tserkov, Ukraine</item>
+		<item>Taranto, Italy</item>
+		<item>Starsy Oskol, Russia</item>
+		<item>Kielce, Poland</item>
+		<item>Gliwice, Poland</item>
+		<item>Badalona, Spain</item>
+		<item>Bordeaux, France</item>
+		<item>Bacau, Romania</item>
+		<item>Highland, UK</item>
+		<item>Montpellier, France</item>
+		<item>Balakovo, Russia</item>
+		<item>Rochdale, UK</item>
+		<item>Zelenograd, Russia</item>
+		<item>Espoo, Finland</item>
+		<item>Charleroi, Belgium</item>
+		<item>Torun, Poland</item>
+		<item>Hagen, Germany</item>
+		<item>Bytom, Poland</item>
+		<item>Novorossiysk, Russia</item>
+		<item>Debrecen, Hungary</item>
+		<item>Solihull, UK</item>
+		<item>Rostock, Germany</item>
+		<item>Linz, Austria</item>
+		<item>Santa Cruz de Tenerife, Spain</item>
+		<item>Klaipeda, Lithuania</item>
+		<item>Freiburg im Breisgau, Germany</item>
+		<item>Pskov, Russia</item>
+		<item>Erfurt, Germany</item>
+		<item>Gateshead, UK</item>
+		<item>Eindhoven, Netherlands</item>
+		<item>Split, Croatia</item>
+		<item>Zabrze, Poland</item>
+		<item>Oviedo, Spain</item>
+		<item>Zlatoust, Russia</item>
+		<item>Rennes, France</item>
+		<item>Milton Keynes, UK</item>
+		<item>Yakutsk, Russia</item>
+		<item>Kassel, Germany</item>
+		<item>Banja Luka, Bosnia</item>
+		<item>Le Havre, France</item>
+		<item>Bourgas, Bulgaria</item>
+		<item>Podolsk, Russia</item>
+		<item>North Tyneside, UK</item>
+		<item>Calderdale, UK</item>
+		<item>Northampton, UK</item>
+		<item>Tampere, Finland</item>
+		<item>Tilburg, Netherlands</item>
+		<item>Elche, Spain</item>
+		<item>Portsmouth, UK</item>
+		<item>Kamensk-Uralsky, Russia</item>
+		<item>Brescia, Italy</item>
+		<item>Engels, Russia</item>
+		<item>Warrington, UK</item>
+		<item>Uppsala, Sweden</item>
+		<item>Kramatorsk, Ukraine</item>
+		<item>Pitesti, Romania</item>
+		<item>Syzran, Russia</item>
+		<item>Sabadell, Spain</item>
+		<item>North Somerset, UK</item>
+		<item>Arad, Romania</item>
+		<item>Novocherkassk, Russia</item>
+		<item>Saarbrücken, Germany</item>
+		<item>Odense, Denmark</item>
+		<item>Mainz, Germany</item>
+		<item>Berezniki, Russia</item>
+		<item>Santander, Spain</item>
+		<item>Bury, UK</item>
+		<item>Hamm, Germany</item>
+		<item>Luton, UK</item>
+		<item>Kragujevac, Serbia</item>
+		<item>Reims, France</item>
+		<item>Bielsko-Biala, Poland</item>
+		<item>Reggio di Calabria, Italy</item>
+		<item>Volgodonsk, Russia</item>
+		<item>St Helens, UK</item>
+		<item>Stockton-on-Tees, UK</item>
+		<item>Herne, Germany</item>
+		<item>Vantaa, Finland</item>
+		<item>York, UK</item>
+		<item>Modena, Italy</item>
+		<item>Thamesdown, UK</item>
+		<item>Cagliari, Italy</item>
+		<item>Miskolc, Hungary</item>
+		<item>Southend-on-Sea, UK</item>
+		<item>Groningen, Netherlands</item>
+		<item>Lille, France</item>
+		<item>Turku, Finland</item>
+		<item>Olsztyn, Poland</item>
+		<item>Cartagena, Spain</item>
+		<item>Melitopol, Ukraine</item>
+		<item>Sibiu, Romania</item>
+		<item>New Forest, UK</item>
+		<item>Caerphilly, UK</item>
+		<item>Carmarthenshire, UK</item>
+		<item>Prato, Italy</item>
+		<item>Plzen, Czech Republic</item>
+		<item>Abakan, Russia</item>
+		<item>Rijeka, Croatia</item>
+		<item>Toulon, France</item>
+		<item>Parma, Italy</item>
+		<item>Baranovichi, Belarus</item>
+		<item>Kertch, Ukraine</item>
+		<item>Maikop, Russia</item>
+		<item>Miass, Russia</item>
+		<item>Solingen, Germany</item>
+		<item>Livorno, Italy</item>
+		<item>Lyubertsy, Russia</item>
+		<item>Wycombe, UK</item>
+		<item>Tarrasa, Spain</item>
+		<item>Armavir, Russia</item>
+		<item>Fuenlabrada, Spain</item>
+		<item>Podgorica, Serbia</item>
+		<item>Alcalá de Henares, Spain</item>
+		<item>Basildon, UK</item>
+		<item>Rubtsovsk, Russia</item>
+		<item>Pamplona, Spain</item>
+		<item>Burgos, Spain</item>
+		<item>Leskovac, Serbia</item>
+		<item>Kovrov, Russia</item>
+		<item>Leverkusen, Germany</item>
+		<item>Bournemouth, UK</item>
+		<item>Breda, Netherlands</item>
+		<item>Peterborough, UK</item>
+		<item>Szeged, Hungary</item>
+		<item>Nakhodka, Russia</item>
+		<item>NE Lincolnshire, UK</item>
+		<item>Ruda Slaska, Poland</item>
+		<item>Salamanca, Spain</item>
+		<item>Salavat, Russia</item>
+		<item>Ussuriisk, Russia</item>
+		<item>Mytishchi, Russia</item>
+		<item>Chelmsford, UK</item>
+		<item>Foggia, Italy</item>
+		<item>Brighton, UK</item>
+		<item>South Tyneside, UK</item>
+		<item>Charnwood, UK</item>
+		<item>Aylesbury Vale, UK</item>
+		<item>Colchester, UK</item>
+		<item>Oldenburg, Germany</item>
+		<item>Knowsley, UK</item>
+		<item>Patrai, Greece</item>
+		<item>Apeldoorn, Netherlands</item>
+		<item>North Lincolnshire, UK</item>
+		<item>Huntingdonshire, UK</item>
+		<item>Macclesfield, UK</item>
+		<item>Blackpool, UK</item>
+		<item>Perugia, Italy</item>
+		<item>Nijmegen, Netherlands</item>
+		<item>Beltsy, Moldova</item>
+		<item>Kolomna, Russia</item>
+		<item>Grenoble, France</item>
+		<item>West Lothian, UK</item>
+		<item>Borisov, Belarus</item>
+		<item>South Somerset, UK</item>
+		<item>Dundee, UK</item>
+		<item>Nikopol, Ukraine</item>
+		<item>Neuss, Germany</item>
+		<item>Baia Mare, Romania</item>
+		<item>Enschede, Netherlands</item>
+		<item>Norilsk, Russia</item>
+		
+		<!-- Major Indian cities -->
+		
+		<item>Mumbai, India</item>
+		<item>Kolkata, India</item>
+		<item>Delhi, India</item>
+		<item>Chennai, India</item>
+		<item>Bangalore, India</item>
+		<item>Hyderabad, India</item>
+		<item>Ahmadabad, India</item>
+		<item>Pune, India</item>
+		<item>Surat, India</item>
+		<item>Kanpur, India</item>
+		<item>Jaipur, India</item>
+		<item>Lucknow, India</item>
+		<item>Nagpur, India</item>
+		<item>Patna, India</item>
+		<item>Indore, India</item>
+		<item>Vadodara, India</item>
+		<item>Bhopal, India</item>
+		<item>Coimbatore, India</item>
+		<item>Ludhiana, India</item>
+		<item>Kochi, India</item>
+		<item>Visakhapatnam, India</item>
+		<item>Agra, India</item>
+		<item>Varanasi, India</item>
+		<item>Madurai, India</item>
+		<item>Meerut, India</item>
+		<item>Nashik, India</item>
+		<item>Jabalpur, India</item>
+		<item>Jamshedpur, India</item>
+		<item>Asansol, India</item>
+		<item>Dhanbad, India</item>
+		<item>Faridabad, India</item>
+		<item>Allahabad, India</item>
+		<item>Amritsar, India</item>
+		<item>Vijayawada, India</item>
+		<item>Rajkot, India</item>
+	</string-array>
 </resources>

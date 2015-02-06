@@ -21,8 +21,9 @@ import android.widget.TextView;
 
 public class WeatherForecast extends Activity{
 
-	String city;
-	String forecast_url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&units=metric&cnt=3";
+	private String city;
+	private String forecast_url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&units=metric&cnt=3";
+	private static String mDebug = WeatherForecast.class.getName();
 	TextView dayname1;
 	TextView date1;
 	TextView temp1;
@@ -70,16 +71,16 @@ public class WeatherForecast extends Activity{
 		DownloadWeatherData data = new DownloadWeatherData();
 		data.execute(new String[] {forecast_url});
 	}
-
+	
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
 		super.onBackPressed();
 		overridePendingTransition(R.anim.weather_forecast, R.anim.current_conditions);
 	}
+	
 	private class DownloadWeatherData extends AsyncTask<String, Void, JSONObject>{
 
-		
 		@Override
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
@@ -97,12 +98,12 @@ public class WeatherForecast extends Activity{
 			try {
 				url = new URL(weather_forecast);
 			} catch (MalformedURLException e) {
-				Log.d("abhishek","Code jumped to catch probably because the url requested is malformed. The value of URL is: "+ url);
+				Log.d(mDebug,"Code jumped to catch probably because the url requested is malformed. The value of URL is: "+ url);
 				return null;
 			}
 			
 			if(url != null){
-				Log.d("abhishek","The value of object url is: "+ url);
+				Log.d(mDebug,"The value of object url is: "+ url);
 				try {
 					connection = (HttpURLConnection) url.openConnection();
 					/*x-api-key: An API key is required to access OpenWeatherMap API. This key can be obtained 
@@ -111,7 +112,7 @@ public class WeatherForecast extends Activity{
 						connection.addRequestProperty("x-api-key", "2222");
 					}
 					else{
-						Log.d("abhishek","Check the value of connection: "+ connection);
+						Log.d(mDebug,"Check the value of connection: "+ connection);
 					}
 					BufferedReader inputreader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 					StringBuffer buf = null;
@@ -125,9 +126,9 @@ public class WeatherForecast extends Activity{
 					try {
 						json = new JSONObject(buf.toString());
 						if(json!=null){
-							Log.d("abhishek", "After creating the JsonObject and inside if: The value of json is" + json);
+							Log.d(mDebug, "After creating the JsonObject and inside if: The value of json is" + json);
 							if(json.getInt("cod") != 200){
-								Log.d("abhishek", "Checking the value of cod: The value of cod in the response received is: " + json.getInt("cod"));
+								Log.d(mDebug, "Checking the value of cod: The value of cod in the response received is: " + json.getInt("cod"));
 								return null;
 							}
 						}
